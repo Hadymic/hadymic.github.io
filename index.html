@@ -13,6 +13,8 @@
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
   <meta name="theme-color" content="#2f4154">
   <meta name="description" content="">
   <meta name="author" content="John Doe">
@@ -50,7 +52,7 @@
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
-       href="/">&nbsp;<strong>Fluid</strong>&nbsp;</a>
+       href="/">&nbsp;<strong>Hadymic's Blog</strong>&nbsp;</a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
             data-target="#navbarSupportedContent"
@@ -67,7 +69,7 @@
           
           <li class="nav-item">
             <a class="nav-link" href="/">
-              <i class="iconfont icon-home-fill"></i>
+              
               首页</a>
           </li>
         
@@ -76,7 +78,7 @@
           
           <li class="nav-item">
             <a class="nav-link" href="/archives/">
-              <i class="iconfont icon-archive-fill"></i>
+              
               归档</a>
           </li>
         
@@ -85,7 +87,7 @@
           
           <li class="nav-item">
             <a class="nav-link" href="/categories/">
-              <i class="iconfont icon-category-fill"></i>
+              
               分类</a>
           </li>
         
@@ -94,7 +96,7 @@
           
           <li class="nav-item">
             <a class="nav-link" href="/tags/">
-              <i class="iconfont icon-tags-fill"></i>
+              
               标签</a>
           </li>
         
@@ -103,7 +105,7 @@
           
           <li class="nav-item">
             <a class="nav-link" href="/about/">
-              <i class="iconfont icon-user-fill"></i>
+              
               关于</a>
           </li>
         
@@ -119,7 +121,7 @@
 </nav>
 
     <div class="view intro-2" id="background" parallax=true
-         style="background: url('/img/default.png') no-repeat center center;
+         style="background: url('/img/default.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
@@ -152,29 +154,84 @@
               <div class="col-12 col-md-10 m-auto">
                 
 
-
   <div class="row mx-auto index-card">
     
     
     <div class="col-12 col-md-12 mx-auto index-info">
-      <a class="index-header" href="/2020/05/27/hello-world/">Hello World</a>
+      <a class="index-header" href="/2020/05/28/%E8%AE%B0%E6%90%AD%E5%BB%BABlog%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/">记搭建Blog中遇到的那些事儿</a>
 
-      <a href="/2020/05/27/hello-world/" class="index-excerpt">
+      <a href="/2020/05/28/%E8%AE%B0%E6%90%AD%E5%BB%BABlog%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/" class="index-excerpt">
         
         
           
         
-        <div>Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick</div>
+        <div>从0开始建站本博客采用了Hexo + Github Pages的方案（主要是不花钱）。关于Hexo的主题，在GitHub中经过多番挑选，最终选用了Fluid。网上教程那么多，这里就不详述了，主要想记录一下搭建过程中遇到的问题。
+Git与SSH网上很多教程都配置了以SSH的方式连接Github仓库，但在_config.yml中却依旧使用HTTPS的方式进行连接。这就导致了配置完成后即便以SSH连接G</div>
       </a>
 
       <div class="index-btm post-metas">
         
           <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>&nbsp;2020-05-27
+            <i class="iconfont icon-date"></i>&nbsp;2020-05-28
           </div>
         
         
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Hexo/">Hexo</a>
+            
+              <a href="/tags/Fluid/">Fluid</a>
+            
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2020/05/28/hello-world/" target="_self">
+          <img src="https://t8.baidu.com/it/u=2247852322,986532796&fm=79&app=86&size=h300&n=0&g=4n&f=jpeg?sec=1591262865&t=f9199846e0b9a93054f9e1a23dd94be3" srcset="/img/loading.gif" alt="Hello World">
+        </a>
+      </div>
+    
+    <div class="col-12 col-md-8 mx-auto index-info">
+      <a class="index-header" href="/2020/05/28/hello-world/">Hello World</a>
+
+      <a href="/2020/05/28/hello-world/" class="index-excerpt">
+        
+        
+          
+        
+        <div> #首先这是一个摘要分割符
+#这是一级标题##这是二级标题###这是三级标题####这是四级标题…    #这是放置一个图片
+
+ 任务一 未做任务 - + 空格 + [ ]
+ 任务二 已做任务 - + 空格 + [x]    #这是服务列表&nbsp;    #设置缩进之一个空格
+
+斜体或斜体粗体加粗斜体删除线++下划线++==背景高亮==
+超链接还是比较好用
+我经常去的几个网站Google、Le</div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2020-05-28
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Markdown/">Markdown</a>
+            
+          </div>
         
       </div>
     </div>
@@ -223,6 +280,29 @@ Quick</div>
   
 
   
+    <!-- APlayer 音乐播放器 -->
+    <div id="aplayer"></div>
+    <script defer src="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.js" ></script>
+<link  rel="stylesheet" href="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.css" />
+<script type="text/javascript">
+  var oldLoadAp = window.onload;
+  window.onload = function () {
+    oldLoadAp && oldLoadAp();
+
+    new APlayer({
+      container: document.getElementById('aplayer'),
+      fixed: true,
+      autoplay: 'false' === 'true',
+      loop: 'all',
+      order: 'random',
+      theme: '#b7daff',
+      preload: 'none',
+      audio: [{"name":"Ref:rain","artist":"Aimer","url":"http://music.163.com/song/media/outer/url?id=536623501.mp3","cover":"http://p2.music.126.net/JolBynAVg8904NdluBfK4Q==/109951163153329445.jpg","lrc":"http://music.163.com/api/song/media?id=536623501"},{"name":"LOSER","artist":"米津玄師","url":"http://music.163.com/song/media/outer/url?id=512359195.mp3","cover":"http://p2.music.126.net/A-VUmkAaUVQ88iXBrsbQ1A==/109951163561900568.jpg"}]
+    });
+  }
+</script>
+
+  
 
   
 
@@ -237,6 +317,26 @@ Quick</div>
     
 
     
+  <!-- 备案信息 -->
+  <div>
+    <a href="http://beian.miit.gov.cn/" target="_blank" class="beian-icp"
+       rel="nofollow noopener">京ICP证123456号</a>
+    
+      <a
+        href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=12345678"
+        rel="nofollow noopener"
+        class="beian-police"
+        target="_blank"
+      >
+        <span class="beian-police-sep">&nbsp;|&nbsp;</span>
+        
+          <img src="/img/police_beian.png" srcset="/img/loading.gif" alt="police-icon" />
+        
+        <span>京公网安备12345678号</span>
+      </a>
+     
+  </div>
+
 
     
   </div>
@@ -268,15 +368,32 @@ Quick</div>
 
   <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
   <script>
-    var typed = new Typed('#subtitle', {
-      strings: [
-        '  ',
-        "An elegant Material-Design theme for Hexo&nbsp;",
-      ],
-      cursorChar: "_",
-      typeSpeed: 70,
-      loop: false,
-    });
+    if (true && "" == "") {
+      fetch('https://v1.hitokoto.cn')
+          .then(response => response.json())
+          .then(data => {
+            var typed = new Typed('#subtitle', {
+              strings: [
+                '  ',
+                data.hitokoto + "&nbsp;",
+              ],
+              cursorChar: "_",
+              typeSpeed: 70,
+              loop: false,
+            });
+          })
+            .catch(console.error)
+    } else {
+      var typed = new Typed('#subtitle', {
+        strings: [
+          '  ',
+          "&nbsp;",
+        ],
+        cursorChar: "_",
+        typeSpeed: 70,
+        loop: false,
+      });
+    }
     typed.stop();
     $(document).ready(function () {
       $(".typed-cursor").addClass("h2");

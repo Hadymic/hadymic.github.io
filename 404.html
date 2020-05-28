@@ -13,6 +13,8 @@
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
   <meta name="theme-color" content="#2f4154">
   <meta name="description" content="">
   <meta name="author" content="John Doe">
@@ -50,7 +52,7 @@
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
-       href="/">&nbsp;<strong>Fluid</strong>&nbsp;</a>
+       href="/">&nbsp;<strong>Hadymic's Blog</strong>&nbsp;</a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
             data-target="#navbarSupportedContent"
@@ -67,7 +69,7 @@
           
           <li class="nav-item">
             <a class="nav-link" href="/">
-              <i class="iconfont icon-home-fill"></i>
+              
               首页</a>
           </li>
         
@@ -76,7 +78,7 @@
           
           <li class="nav-item">
             <a class="nav-link" href="/archives/">
-              <i class="iconfont icon-archive-fill"></i>
+              
               归档</a>
           </li>
         
@@ -85,7 +87,7 @@
           
           <li class="nav-item">
             <a class="nav-link" href="/categories/">
-              <i class="iconfont icon-category-fill"></i>
+              
               分类</a>
           </li>
         
@@ -94,7 +96,7 @@
           
           <li class="nav-item">
             <a class="nav-link" href="/tags/">
-              <i class="iconfont icon-tags-fill"></i>
+              
               标签</a>
           </li>
         
@@ -103,7 +105,7 @@
           
           <li class="nav-item">
             <a class="nav-link" href="/about/">
-              <i class="iconfont icon-user-fill"></i>
+              
               关于</a>
           </li>
         
@@ -119,7 +121,7 @@
 </nav>
 
     <div class="view intro-2" id="background" parallax=true
-         style="background: url('/img/default.png') no-repeat center center;
+         style="background: url('/img/default.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
@@ -183,6 +185,29 @@
   
 
   
+    <!-- APlayer 音乐播放器 -->
+    <div id="aplayer"></div>
+    <script defer src="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.js" ></script>
+<link  rel="stylesheet" href="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.css" />
+<script type="text/javascript">
+  var oldLoadAp = window.onload;
+  window.onload = function () {
+    oldLoadAp && oldLoadAp();
+
+    new APlayer({
+      container: document.getElementById('aplayer'),
+      fixed: true,
+      autoplay: 'false' === 'true',
+      loop: 'all',
+      order: 'random',
+      theme: '#b7daff',
+      preload: 'none',
+      audio: [{"name":"Ref:rain","artist":"Aimer","url":"http://music.163.com/song/media/outer/url?id=536623501.mp3","cover":"http://p2.music.126.net/JolBynAVg8904NdluBfK4Q==/109951163153329445.jpg","lrc":"http://music.163.com/api/song/media?id=536623501"},{"name":"LOSER","artist":"米津玄師","url":"http://music.163.com/song/media/outer/url?id=512359195.mp3","cover":"http://p2.music.126.net/A-VUmkAaUVQ88iXBrsbQ1A==/109951163561900568.jpg"}]
+    });
+  }
+</script>
+
+  
 
   
 
@@ -197,6 +222,26 @@
     
 
     
+  <!-- 备案信息 -->
+  <div>
+    <a href="http://beian.miit.gov.cn/" target="_blank" class="beian-icp"
+       rel="nofollow noopener">京ICP证123456号</a>
+    
+      <a
+        href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=12345678"
+        rel="nofollow noopener"
+        class="beian-police"
+        target="_blank"
+      >
+        <span class="beian-police-sep">&nbsp;|&nbsp;</span>
+        
+          <img src="/img/police_beian.png" srcset="/img/loading.gif" alt="police-icon" />
+        
+        <span>京公网安备12345678号</span>
+      </a>
+     
+  </div>
+
 
     
   </div>
@@ -228,15 +273,32 @@
 
   <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
   <script>
-    var typed = new Typed('#subtitle', {
-      strings: [
-        '  ',
-        "Page not found&nbsp;",
-      ],
-      cursorChar: "_",
-      typeSpeed: 70,
-      loop: false,
-    });
+    if (true && "Page not found" == "") {
+      fetch('https://v1.hitokoto.cn')
+          .then(response => response.json())
+          .then(data => {
+            var typed = new Typed('#subtitle', {
+              strings: [
+                '  ',
+                data.hitokoto + "&nbsp;",
+              ],
+              cursorChar: "_",
+              typeSpeed: 70,
+              loop: false,
+            });
+          })
+            .catch(console.error)
+    } else {
+      var typed = new Typed('#subtitle', {
+        strings: [
+          '  ',
+          "Page not found&nbsp;",
+        ],
+        cursorChar: "_",
+        typeSpeed: 70,
+        loop: false,
+      });
+    }
     typed.stop();
     $(document).ready(function () {
       $(".typed-cursor").addClass("h2");
