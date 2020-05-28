@@ -2,7 +2,7 @@
 title: 记搭建Blog中遇到的那些事儿
 date: 2020-05-28 19:06:01
 tags: [Hexo, Fluid]
-index_img: https://raw.githubusercontent.com/Hadymic/PersonalPicBed/master/img/Snipaste_2020-05-28_21-53-39.png
+index_img: https://cdn.jsdelivr.net/gh/Hadymic/PersonalPicBed/img/Snipaste_2020-05-28_21-53-39.png
 ---
 
 # ~~从0开始建站~~
@@ -32,7 +32,7 @@ deploy:
 
 ## 首页Slogan改为一言
 
-![首页一言展示](https://raw.githubusercontent.com/Hadymic/PersonalPicBed/master/img/%E9%A6%96%E9%A1%B5%E4%B8%80%E8%A8%80%E5%B1%95%E7%A4%BA.gif)
+![首页一言展示](https://cdn.jsdelivr.net/gh/Hadymic/PersonalPicBed/img/%E9%A6%96%E9%A1%B5%E4%B8%80%E8%A8%80%E5%B1%95%E7%A4%BA.gif)
 
 主要有两个想法，首页Slogan改为一言，同时保留打字机的效果。
 
