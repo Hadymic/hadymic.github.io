@@ -1,10 +1,16 @@
 ---
 title: Hello World
-tags: [Markdown]
-index_img: https://t8.baidu.com/it/u=2247852322,986532796&fm=79&app=86&size=h300&n=0&g=4n&f=jpeg?sec=1591262865&t=f9199846e0b9a93054f9e1a23dd94be3
+tags:
+  - Markdown
+index_img: >-
+  https://t8.baidu.com/it/u=2247852322,986532796&fm=79&app=86&size=h300&n=0&g=4n&f=jpeg?sec=1591262865&t=f9199846e0b9a93054f9e1a23dd94be3
+top: true
+hide: true
+abbrlink: 4a17b156
 date: 2020-05-28 18:00:00
-top: 99
 ---
+
+这里是摘要
 
 <!--more--> #首先这是一个摘要分割符
 #这是一级标题
@@ -13,6 +19,7 @@ top: 99
 ####这是四级标题
 ...
 ![图片详情](url "{图片占位符}")    #这是放置一个图片
+
 - [ ] 任务一 未做任务 `- + 空格 + [ ]`
 - [x] 任务二 已做任务 `- + 空格 + [x]`    #这是服务列表
 &nbsp;    #设置缩进之一个空格

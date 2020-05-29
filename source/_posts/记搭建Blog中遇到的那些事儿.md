@@ -1,9 +1,19 @@
 ---
 title: 记搭建Blog中遇到的那些事儿
+tags:
+  - Hexo
+  - Fluid
+categories:
+  - 博客
+index_img: >-
+  https://cdn.jsdelivr.net/gh/Hadymic/PersonalPicBed/img/Snipaste_2020-05-28_21-53-39.png
+abbrlink: 8eecdd0d
 date: 2020-05-28 19:06:01
-tags: [Hexo, Fluid]
-index_img: https://cdn.jsdelivr.net/gh/Hadymic/PersonalPicBed/img/Snipaste_2020-05-28_21-53-39.png
 ---
+
+记搭建Blog中遇到的那些事儿。
+
+<!--more-->
 
 # ~~从0开始建站~~
 
@@ -75,6 +85,11 @@ index:
               typeSpeed: <%- theme.fun_features.typing.typeSpeed %>,
               loop: <%- theme.fun_features.typing.loop %>,
             });
+            typed.stop();
+            $(document).ready(function () {
+              $(".typed-cursor").addClass("h2");
+              typed.start();
+            });
           })
             .catch(console.error)
     } else {
@@ -87,12 +102,12 @@ index:
         typeSpeed: <%- theme.fun_features.typing.typeSpeed %>,
         loop: <%- theme.fun_features.typing.loop %>,
       });
+      typed.stop();
+      $(document).ready(function () {
+        $(".typed-cursor").addClass("h2");
+        typed.start();
+      });
     }
-    typed.stop();
-    $(document).ready(function () {
-      $(".typed-cursor").addClass("h2");
-      typed.start();
-    });
   </script>
 <% } %>
 ```

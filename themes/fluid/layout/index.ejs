@@ -17,7 +17,12 @@ page.banner_mask_alpha = theme.index.banner_mask_alpha
       </div>
     <% } %>
     <div class="col-12 col-md-<%= index_img ? '8' : '12' %> mx-auto index-info">
-      <a class="index-header" href="<%- post_url %>"><%= post.title %></a>
+      <a class="index-header" href="<%- post_url %>"><%= post.title %>
+        <% if(post.top) { %>
+          <span>|</span>
+          <i class="iconfont icon-top"></i>
+        <%}%>
+      </a>
 
       <a href="<%- post_url %>" class="index-excerpt">
         <% var excerpt = '' %>
